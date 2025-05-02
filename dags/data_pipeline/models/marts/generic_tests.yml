@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fct_orders
+    columns:
+      - name: order_key
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('stg_tpch_orders')
+              field: order_key
+              severity: warn
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['F', 'P', 'O']
+              severity: warn

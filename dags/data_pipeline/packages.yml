@@ -1,0 +1,6 @@
+packages:
+  # This is a list of packages that dbt will install and make available to your project.
+  # You can specify the package name and version, or use a git repository.
+  # For example:
+  - package: dbt-labs/dbt_utils
+    version: 1.1.1
